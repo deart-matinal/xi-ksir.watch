@@ -1,0 +1,120 @@
+.background {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9; /* 设置背景透明度 */
+    background-size: cover; /* 填充形式 */
+    z-index: -1; 
+    filter: blur(10px); /* 初始背景模糊，模拟景深效果 */
+    transition: filter 1s ease-out; /* 平滑过渡 */
+}
+
+.output {
+    display: none; 
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px; 
+    border: 1px solid rgb(8, 124, 224);
+    width: 89%; /* 使输出部分宽度填充内容区域 */
+}
+
+.input-container {
+    margin-bottom: 5px; /* 输入框之间的间距 */
+}
+
+input {
+    width: 45%;
+    margin-right: 4%; /* 输入框与按钮之间的间距 */
+}
+
+button {
+    background-color: hsl(201, 100%, 63%);
+    border-radius: 5px; 
+    border: none; /* 去掉默认边框 */
+    width: 30%; 
+}
+
+button:hover {
+    background-color: hsl(215, 90%, 44%);
+}
+
+/* 水平居中, 文本左对齐*/
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    justify-content: center; 
+}
+
+.content {
+    text-align: left;      
+    max-width: 700px;     
+    width: 100%;           
+}
+
+/* 内容包装器样式 */
+.content-wrapper {
+    background-color: rgba(255, 255, 255, 0.5); /* 半透明白色 */
+    border-radius: 20px;     /* 圆角效果 */
+    padding: 20px;           /* 内边距 */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+    max-width: 700px;        /* 最大宽度 */
+    width: 100%;             /* 宽度自适应 */
+    text-align: left;        /* 内容左对齐 */
+}
+
+/* 屏幕进入时的景深效果 */
+@keyframes depthOfField {
+    0% {
+        filter: blur(10px);
+    }
+    100% {
+        filter: blur(0px);
+    }
+}
+
+/* 设置景深动画 */
+.background.loaded {
+    animation: depthOfField 1s ease-out forwards;
+}
+
+
+/* 弹窗样式局部化 */
+.top-popup {
+    position: fixed;
+    top: 50px; /* 顶部距离 */
+    left: 50%;
+    transform: translateX(-50%); /* 水平居中 */
+    background-color: rgba(56, 65, 74, 0.5); /* 半透明蓝色背景 */
+    color: #fff; /* 字体颜色 */
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: var(--border-radius, 50px); /* 自定义圆角 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0; /* 初始透明度 */
+    pointer-events: none; /* 不影响页面操作 */
+    z-index: 9999; /* 确保弹窗显示在最上层 */
+    animation: slideDownFadeOut 3.5s ease forwards;
+}
+
+/* 弹窗动画 */
+@keyframes slideDownFadeOut {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-30px);
+    }
+    10% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+    90% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-30px);
+    }
+}

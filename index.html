@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<!-------------------->
+<!-- ksir-watchV1.0.5  -->
+<!--      正式版      -->
+<!-------------------->
+<!--使用须知：网站设立仅以学习为目的，一切后果由使用者承担-->
+
+
+
+
+<!--！！！在修改源码时，请将源码文件进行备份！！！-->
+
+
+
+
+
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="author" content="deart-夕">
+    <meta name="description" content="一个用于解析视频的地方">
+    <meta name="keywords" content="梦起飞的地方,免费视频,deart-xi,deart-夕,ksirwatch,冬原上的小屋,幕伞科技">
+    <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>ksir-watch</title>
+    <link rel="stylesheet" type="text/css" href="style.css"> 
+    <link rel="shortcut icon" href="/images/favicon.ico" />
+
+</head>
+
+<body>
+    <div class="background" id="background"></div>
+
+    <div class="content">
+
+        <div class="content-wrapper">
+
+            <font size="7">ksir_watch&nbsp;V1.5</font><br />
+            <font size="7">Android/Windows</font>
+            <h4></h4>
+
+            <font size="5" color="#03f2ff">留言板</font>
+            <h4></h4>
+            <a href="/word/main.php" target="_blank">跳转</a>
+            <h4></h4>
+
+            <font size="5" color="FFCC66">人工智能(chatgpt-4o-mini)</font>
+            <h4></h4>
+            <a href="/chatgpt/index.html" target="_blank">入口</a>
+            <h4></h4>
+
+            <font size="5" color="FFCC66">*使用方法(必看)</font>
+            <h4>1.选择影源后，将所对应视频或电影的“网址”复制下来</h4>
+            <h4>注意:网址，网址，网址(重要的事说三遍)</h4>
+            <h4></h4>
+            <h4>2.本网站共提供了两个解析路线,将复制好的网址输入到操作框内</h4>
+            <h4></h4>
+            <h4>3.点击"生成完整视频链接",然后用浏览器直接访问即可</h4>
+            <h4></h4>
+            <h4>4.或者直接点击跳转按,跳转至视频页面</h4>
+            <h4></h4>
+            <font size="4" color="FF0000">!Warning!</font>
+            <h4></h4>
+            <h4>如果在手机上使用，请将浏览器标识改为电脑版访问使用</h4>
+            <a href="/new_report/because.html" target="_blank">为什么会小广告解释</a>
+            <h4></h4>
+            <h4>2.手机版用户在进入全屏模式后,点击消息图标关闭弹幕功能,以防不文明人在弹幕中发不雅词汇,影响观影体验!</h4>
+            <h4></h4>
+            <h4>*建议使用电脑访问</h4>
+            <font size="4" color="FF0000">!Warning!</font>
+            <br />
+            <h4>注:由于部分线路有小广告，所以路线较少，后续会继续增加的</h4>
+            <h4>Email:&nbsp;mini.matinal.dear@tutamail.com</h4>
+            <a href="/new_report/news.html" target="_blank">更新日志</a>
+            <br /><br />
+
+            <font size="5" color="FFCC66">*请选择影源(video_head)</font>
+            <br /><br />
+            <a href="https://www.iqiyi.com/" target="_blank">1.ai&nbsp;qi&nbsp;yi</a>
+            <h4></h4>
+            <a href="https://www.youku.com/" target="_blank">2.you&nbsp;ku</a>
+            <h4></h4>
+            <a href="https://v.qq.com/" target="_blank">3.ten&nbsp;xun&nbsp;shi&nbsp;ping</a>
+            <h4></h4>
+            <a href="https://www.bilibili.com/" target="_blank">4.B&nbsp;zhan</a>
+            <br /><br />
+
+            <font size="5" color="FFCC66">*解析路线(url)</font>
+            <h4></h4>
+
+            <a href="javascript:void(0);" id="link">已隐藏</a>
+            <div class="output" id="output">
+                <h4>链接1</h4>
+                <div class="input-container">
+                    <input type="text" placeholder="视频网址" id="inputA">
+                    <button id="copyButtonA">生成完整视频链接</button>
+                    <button id="redirectButtonA">跳转至视频地址</button> 
+                </div>
+                <h4>链接2</h4>
+                <div class="input-container">
+                    <input type="text" placeholder="视频网址" id="inputB">
+                    <button id="copyButtonB">生成完整视频链接</button>
+                    <button id="redirectButtonB">跳转至视频地址</button> 
+                </div>
+            </div>
+
+            <script src="script.js"></script> 
+            
+            <h4></h4>
+            <h3>免责声明：</h3>
+            <h4>网站内容均来自网络！</h4>
+            <h4>本网站仅限学习、研究，不得用于商业、盈利等非法用途,造成一切后果请使用者自行负责！</h4>
+            <a href="https://space.bilibili.com/1490563718" target="_blank">by:deart-夕</a>
+            <h4></h4>
+            <a href="/words/passage.php" target="_blank">日记</a>
+
+            <h4>@!!!最终解释权归作者所有!!!@</h4>
+
+        </div>
+    </div>
+    
+    <!-- 版权信息 -->
+    <div class="foot">
+        <div class="power">Copyright&nbsp;&copy;&nbsp;2020
+            <script>
+                document.write(' - ' + (new Date()).getFullYear())
+            </script>&nbsp;<a href="https://github.com/deart-matinal/ksir.watch/tree/main">deart-夕</a>
+
+        </div>
+    </div>
+
+    <!-- 弹窗容器 -->
+    <div id="topPopup" class="top-popup">
+        <span id="popupText">“上古有大椿者，以八千岁为春，八千岁为秋”</span>
+    </div>
+
+</body>
+
+</html>

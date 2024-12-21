@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>随机点名器</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        #nameDisplay {
+            font-size: 32px;
+            margin: 40px;
+            color: black;
+        }
+        button {
+            font-size: 14px;
+            padding: 10px 20px;
+            margin: 10px;
+        }
+        button:disabled {
+            background-color: #ccc; 
+            cursor: not-allowed; 
+        }
+    </style>
+</head>
+<body>
+
+<div id="nameDisplay"></div>
+<button id="callButton">随机点名</button>
+
+<!--
+        请替换names.json中的名字
+        请按照该格式进行添加名字
+
+        "a","s","d","f","g","h"..."g"
+        
+-->
+<script>
+    let names = [];
+    async function loadNames() {
+        const response = await fetch('names.json'); 
+        names = await response.json(); 
+    }
+
+    function callName() {
+        const name = names[Math.floor(Math.random() * names.length)];
+        document.getElementById('nameDisplay').innerText = name;
+        speakName(name);
+        const callButton = document.getElementById('callButton');
+        callButton.disabled = true;
+        setTimeout(() => { callButton.disabled = false; }, 500); 
+    }
+
+    function speakName(name) {
+        const utterance = new SpeechSynthesisUtterance(name);
+        speechSynthesis.speak(utterance);
+    }
+
+    document.getElementById('callButton').addEventListener('click', callName);
+    loadNames();
+</script>
+
+</body>
+</html>

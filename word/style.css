@@ -1,0 +1,117 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: #d6eaff;
+    margin: 0;
+    padding: 0;
+}
+
+.message-board {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+h1 {
+    text-align: center;
+    font-size: 36px;
+    color: #4a4a4a;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.message-form {
+    margin-bottom: 40px;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.message-form label {
+    font-weight: bold;
+    color: #555;
+}
+
+.message-form input, .message-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.message-form button {
+    background: #4a90e2;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.message-form button:hover {
+    background: #357ab7;
+}
+
+.message-note {
+    background: #f8e6a3;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    width: 200px;
+    height: auto;
+}
+
+.message-note strong {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.message-time {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.message-note p {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 10px;
+    max-width: 180px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .message-board {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .message-form input, .message-form textarea {
+        font-size: 14px;
+    }
+
+    .message-form button {
+        padding: 12px 25px;
+    }
+
+    .message-note {
+        width: 100%;
+    }
+}
